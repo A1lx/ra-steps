@@ -1,0 +1,43 @@
+.container {
+  width: 410px;
+}
+
+/* стили формы */
+.form {
+  display: flex;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.form-input {
+  height: 30px;
+  text-align: center;
+}
+
+.btn-input {
+  height: 36px;
+  margin-top: auto;
+  cursor: pointer;
+}
+
+/* стили списка тренировок */
+
+.training-list-head {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.training-list-box {
+  width: 100%;
+  min-height: 36px;
+  margin-top: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
