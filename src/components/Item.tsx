@@ -1,5 +1,5 @@
 // отдельная строка списка
-import { IForm } from "./Form"
+import { IForm } from "./Form";
 
 interface IItem {
   item: IForm

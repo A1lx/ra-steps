@@ -1,7 +1,12 @@
 // список тренировок
-import { Item } from "./item"
+import { IForm } from './Form';
+import { Item } from "./Item";
 
-export const TrainingList = ({listsArr}) => {
+interface ITrainingListProps {
+  listsArr: IForm[];
+}
+
+export const TrainingList = ({listsArr}: ITrainingListProps) => {
   return (
     <>
       <div className="training-list-head">
@@ -10,8 +15,8 @@ export const TrainingList = ({listsArr}) => {
         <div>Действия</div>
       </div>
       <div className="training-list-box">
-        {listsArr.map(item => (
-          <Item key={item.id} item={item}/>
+        {listsArr.map((item, index) => (
+          <Item key={index} item={item}/>
         ))}
       </div>
     </>
