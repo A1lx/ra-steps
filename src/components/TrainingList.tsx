@@ -3,10 +3,11 @@ import { IForm } from './Form';
 import { Item } from "./Item";
 
 interface ITrainingListProps {
-  listsArr: IForm[];
+  listsArr: IForm[],
+  handleDelete: (formdata: IForm) => void
 }
 
-export const TrainingList = ({listsArr}: ITrainingListProps) => {
+export const TrainingList = ({listsArr, handleDelete}: ITrainingListProps) => {
   return (
     <>
       <div className="training-list-head">
@@ -16,7 +17,7 @@ export const TrainingList = ({listsArr}: ITrainingListProps) => {
       </div>
       <div className="training-list-box">
         {listsArr.map((item, index) => (
-          <Item key={index} item={item}/>
+          <Item key={index} item={item} handleDelete={handleDelete}/>
         ))}
       </div>
     </>

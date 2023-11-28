@@ -8,11 +8,11 @@ export interface IForm {
   id: number
 }
 
-interface IhandleFormSubmitProps {
+interface IFormProps {
   handleFormSubmit: (formdata: IForm) => void
 }
 
-export const Form = ({handleFormSubmit}: IhandleFormSubmitProps) => {
+export const Form = ({handleFormSubmit}: IFormProps) => {
   const [form, setForm] = useState<IForm>({
     date: '',
     distance: 0,
@@ -37,11 +37,11 @@ export const Form = ({handleFormSubmit}: IhandleFormSubmitProps) => {
     <form className="form" autoComplete="off" onSubmit={handleSubmit}>
       <div className="input-box">
         <label htmlFor="date">Дата (ДД.ММ.ГГ)</label>
-        <input id="date" name="date" className="form-input" type="text" value={form.date} onChange={handleChange}/>
+        <input id="date" name="date" className="form-input" type="date" value={form.date} onChange={handleChange}/>
       </div>
       <div className="input-box">
         <label htmlFor="distance">Пройдено км</label>
-        <input id="distance" name="distance" className="form-input" type="text" value={form.distance} onChange={handleChange}/>
+        <input id="distance" name="distance" className="form-input" type="number" value={form.distance} onChange={handleChange}/>
       </div>
       <button className="btn-input" type="submit">OK</button>
     </form>
